@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          poetry self update
+          poetry self update --no-ansi
           poetry config http-basic.sensynehealth ${GEMFURY_DOWNLOAD_KEY} ''
           pip install --upgrade tox
       - run:
