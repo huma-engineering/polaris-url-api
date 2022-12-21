@@ -5,7 +5,7 @@ ACR_DOCKER_AUTH_MASTER: &ACR_DOCKER_AUTH
     password: ${ACR_PASSWORD}
 
 DOCKER_BUILD_AND_PUSH_PARAMETERS_MASTER: &DOCKER_BUILD_AND_PUSH_PARAMETERS
-  image: ${ACR_REPO_BASE}/gdm-bg-readings-api
+  image: ${ACR_REPO_BASE}/dhos-url-api
   registry: ${AZURE_LOGIN_SERVER_NAME}
   tag: dev,cb-${CIRCLE_BUILD_NUM},$(git log --pretty=format:'%h' -n 1)
 
